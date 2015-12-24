@@ -17,6 +17,15 @@ angular
             controller: 'ChatsCtrl as vm'
           }
         }
+      })
+      .state('tab.chat',{
+          url:'/chats/:chatId',
+          views:{
+            'tab-chats':{
+              templateUrl:'client/templates/chat.html',
+              controller: 'ChatCtrl as vm'
+            }
+          }
       });
       $urlRouterProvider.otherwise('tab/chats');
   }
