@@ -4,6 +4,9 @@ angular
 
   function ChatsCtrl ($scope, $reactive) {
     $reactive(this).attach($scope);
+    this.remove = remove;
+
+
 
     this.data = [
       {
@@ -52,4 +55,9 @@ angular
         }
       }
     ];
+
+    function remove(chat) {
+      this.data.splice(this.data.indexOf(chat), 1);
+    }
+
   }
